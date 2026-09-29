@@ -2,7 +2,21 @@
   "name": "aoqi-legend-theme-plugin",
   "version": "1.0.0",
   "description": "奥奇传说主题美化插件 for DeepSeek Harness - Theme beautification plugin with Aoqi Legend characters, click effects, task notifications, and output optimization",
-  "main": "src/content.js",
+  "type": "module",
+  "main": "dsh/host.js",
+  "exports": {
+    ".": "./dsh/host.js",
+    "./client": "./dsh/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dsh",
+    "src",
+    "assets",
+    "manifest.json",
+    "cordis.patch.yml",
+    "README.md"
+  ],
   "scripts": {
     "build": "echo 'Building plugin...' && echo 'Done!'",
     "test": "echo 'No tests specified'",
@@ -15,6 +29,8 @@
   "keywords": [
     "deepseek",
     "harness",
+    "dsh",
+    "dsh-plugin",
     "theme",
     "aoqi",
     "legend",
@@ -26,12 +42,26 @@
     "奥奇传说",
     "美化插件"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "fuguoqiang-bnu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fuguoqiang-bnu/aoqi-legend-theme-plugin/issues"
   },
   "homepage": "https://github.com/fuguoqiang-bnu/aoqi-legend-theme-plugin#readme",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ],
+      "platform": "web"
+    }
+  }
 }

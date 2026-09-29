@@ -1,0 +1,6 @@
+# aoqi-legend-theme-plugin —— DSH 插件激活条目
+# DSH 的 profile 会读取本文件（package.json 里的 dsh.bundle.patch 指向它），
+# 把插件挂进插件树；id 只用于日志与开关覆盖，name 必须是包名。
+- insert:
+    - id: aoqi-legend-theme
+      name: aoqi-legend-theme-plugin
