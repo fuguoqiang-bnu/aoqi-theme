@@ -1,0 +1,33 @@
+{
+  "name": "奥奇传说主题美化插件",
+  "version": "1.0.0",
+  "description": "为 DeepSeek Harness 提供奥奇传说主题美化、点击特效、任务完成通知和输出优化功能",
+  "author": "Your Name",
+  "manifest_version": 3,
+  "permissions": [
+    "notifications",
+    "storage"
+  ],
+  "icons": {
+    "16": "assets/images/icon-16.png",
+    "48": "assets/images/icon-48.png",
+    "128": "assets/images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["src/styles.css"],
+      "js": ["src/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/**/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "aoqi-legend-theme-plugin",
+  "version": "1.0.0",
+  "description": "奥奇传说主题美化插件 for DeepSeek Harness - Theme beautification plugin with Aoqi Legend characters, click effects, task notifications, and output optimization",
+  "main": "src/content.js",
+  "scripts": {
+    "build": "echo 'Building plugin...' && echo 'Done!'",
+    "test": "echo 'No tests specified'",
+    "pack": "zip -r aoqi-legend-theme-plugin.zip . -x '*.git*' 'node_modules/*' '*.zip'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuguoqiang-bnu/aoqi-legend-theme-plugin.git"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "theme",
+    "aoqi",
+    "legend",
+    "beautification",
+    "chrome-extension",
+    "userscript",
+    "notification",
+    "click-effects",
+    "奥奇传说",
+    "美化插件"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fuguoqiang-bnu/aoqi-legend-theme-plugin/issues"
+  },
+  "homepage": "https://github.com/fuguoqiang-bnu/aoqi-legend-theme-plugin#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
